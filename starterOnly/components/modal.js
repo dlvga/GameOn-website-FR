@@ -7,26 +7,36 @@ function editNav() {
   }
 }
 
+document.getElementById("first-name").value = "Jean";
+document.getElementById("last-name").value = "Dupont";
+document.getElementById("email").value = "jean.dupont@example.com";
+document.getElementById("birthdate").value = "1990-01-01";
+document.getElementById("tournament-number").value = "2";
+document.getElementById("location3").checked = true;
+document.getElementById("checkbox2").checked = true;
+
 // DOM Elements
-const modalbg = document.querySelector(".bground");
+const modalSignUp = document.querySelector(".modal--signUp");
 const modalBtn = document.querySelectorAll(".modal-btn");
-const formData = document.querySelectorAll(".formData");
-const modalCloseIcon = document.getElementById('modal__icon--close');
+const modalCloseIcon = document.querySelectorAll('.modal__icon--close');
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener('click', launchModal));
 
 // launch modal form
 function launchModal() {
-  modalbg.style.display = "block";
+  modalSignUp.style.display = "block";
 }
 
 //close modal when click on close modal icon
-const closeModal =  () => {
-  modalbg.style.display = "none";
+const closeModal =  (event) => {
+  const parentModal = event.target.closest('.modal');
+  if (parentModal) {
+    parentModal.style.display = "none";
+  }
 }
 
 // event listener on modal close icon
-modalCloseIcon.addEventListener("click", closeModal);
+modalCloseIcon.forEach((icon) => icon.addEventListener("click", closeModal));
 
 

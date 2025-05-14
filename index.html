@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <title>Reservation</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="starterOnly/modal.css" />
+    <link rel="stylesheet" href="starterOnly/css/modal.css" />
+    <link rel="stylesheet" href="starterOnly/css/modal-confirm.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link
       href="https://fonts.googleapis.com/css?family=DM+Sans"
@@ -51,13 +52,13 @@
         </button>
       </div>
 
-      <div class="bground">
-        <div class="content">
-          <span class="close" id="modal__icon--close"></span>
+      <div class="modal modal--signUp">
+        <div class="modal__content">
+          <span class="modal__icon modal__icon--close"></span>
           <div class="modal-body">
             <form
               name="reserve"
-              action="index.html"
+              action="#"
               method="get"
             >
               <div
@@ -205,6 +206,21 @@
           </div>
         </div>
       </div>
+      <div class="modal modal--confirm">
+        <div class="modal__content">
+          <div class="modal__body modal__body--confirm">
+            <div>
+              <span class="modal__icon modal__icon--close"></span>
+            </div>
+            <p class="modal__text">
+              Merci pour votre inscription
+            </p>
+            <div class="modal__btn-wrapper">
+              <button class="button btn-close-confirm">Fermer</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
       <p class="copyrights">
@@ -212,6 +228,7 @@
       </p>
     </footer>
     <script src="starterOnly/components/modal.js"></script>
-    <script src="starterOnly/components/form-modal.js"></script>
+    <script src="starterOnly/components/subscriptionModal.js"></script>
+    <script src="starterOnly/components/subscriptionConfirmationModal.js"></script>
   </body>
 </html>

@@ -9,9 +9,6 @@ document.querySelector('form').addEventListener('submit', function(event) {
     });
 
     const formData = new FormData(this);
-    formData.forEach((key, value) => {
-        console.log(key, value);
-    })
 
     const errorMessages = new Map();
 
@@ -72,6 +69,10 @@ document.querySelector('form').addEventListener('submit', function(event) {
             }
         });
     } else {
+        const modalWelcome = document.querySelector('.modal--confirm');
+        const modalSignUp = document.querySelector('.modal--signUp');
         this.submit();
+        modalWelcome.style.display = 'block';
+        modalSignUp.style.display = 'none';
     }
 });
