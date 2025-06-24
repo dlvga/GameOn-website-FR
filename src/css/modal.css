@@ -34,10 +34,10 @@ img {
   margin: 3.5%;
 }
 .header-logo {
-    float: left;
+  float: left;
 }
 .main-navbar {
-    float: right;
+  float: right;
 }
 .topnav a {
   float: left;
@@ -87,18 +87,11 @@ img {
     display: block;
     text-align: left;
   }
+    .topnav.responsive span {
+        margin-right: 30px;
+    }
 }
 
-
-
- @media screen and (max-width: 540px) {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-    margin-top: -15px;
-  }
-} 
 
 main {
   font-size: 130%;
@@ -158,27 +151,28 @@ main {
 
 .modal {
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 1;
   top: 0;
-  height: max(100vh, 870px);
-  overflow: auto;
-  background:white;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
   width: 100%;
+  background: white;
 }
 
 .modal__content {
-  width: 500px;
-  margin-top: 80px;
-  animation-name: modalopen;
-  animation-duration: var(--modal-duration);
+  width: 100%;
+  margin: 80px auto;
   background: #232323;
-  border-radius: 10px 10px 0 0;
-  overflow: hidden;
+  border-radius: 10px;
   position: relative;
   color: #fff;
   padding-top: 10px;
-  left: calc((100vw - 500px)/2);
+  left: auto;
+  overflow: auto;
+  max-width: 500px;
 }
 
 .modal-body {
@@ -513,19 +507,21 @@ footer {
     left: 0;
     width: 100%;
     background: none;
+    /* max-width: 500px; */
   }
 
   .modal__text {
     width: 310px;
-    height: 105px;
+    /* height: 105px; */
     font-size: 2.5rem;
   }
 
   .modal__content {
-    width: 100%;
+    /* width: 90%; */
     max-width: 768px;
-    height: 100%;
-    left: 0;
+    /* margin: 40px auto 40px auto; */ /* Réduire la marge du haut */
+    height: max(100%, 800px); /* Hauteur adaptative */
+    left: auto;
   }
 }
 
