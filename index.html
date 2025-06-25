@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <title>Reservation</title>
@@ -13,22 +13,24 @@
     />
   </head>
   <body>
+    <!-- Navigation bar -->
     <div class="topnav" id="myTopnav">
       <div class="header-logo">
       <img alt="logo" src="src/Logo.png"/>
     </div>
     <div class="main-navbar">
-
+      <!-- Navigation links -->
       <a href="#" class="active"><span>Détails de l'évènement</span></a>
       <a href="#"><span>À propos</span></a>
       <a href="#"><span>Contact</span></a>
       <a href="#"><span>Évènements passés</span></a>
-      <a href="javascript:void(0);" class="icon" onclick="editNav()">
+      <a href="#" class="icon" id="nav-toggle">
         <i class="fa fa-bars"></i>
       </a>
     </div>
     </div>
     <main>
+      <!-- Hero section with title, text and image -->
       <div class="hero-section">
         <div class="hero-content">
           <h1 class="hero-headline">
@@ -39,22 +41,28 @@
             Vous aimez jouer ? Notre prochain évènement gaming est ouvert
             aux réservations... Places limitées !
           </p>
+          <!-- Signup button that opens the modal -->
           <button class="btn-signup modal-btn">
             je m'inscris
           </button>
         </div>
+        <!-- Hero image -->
         <div class="hero-img">
           <img src="src/bg_img.jpg" alt="img" />
         </div>
+        <!-- Signup button that opens the modal for mobile and tablets -->
         <button class="btn-signup modal-btn">
           je m'inscris
         </button>
       </div>
 
+      <!-- Registration modal -->
       <div class="modal modal--signUp">
         <div class="modal__content">
+          <!-- Close button/icon -->
           <span class="modal__icon modal__icon--close"></span>
           <div class="modal-body">
+            <!-- Registration form -->
             <form
               name="reserve"
               method="get"
@@ -204,6 +212,7 @@
           </div>
         </div>
       </div>
+      <!-- Confirmation modal after form submission -->
       <div class="modal modal--confirm">
         <div class="modal__content">
           <div class="modal__body modal__body--confirm">
@@ -220,12 +229,15 @@
         </div>
       </div>
     </main>
+    <!-- Footer section -->
     <footer>
       <p class="copyrights">
         Copyright 2014 - 2022, GameOn Inc.
       </p>
     </footer>
+    <!-- JavaScript files to handle modals and form behavior -->
     <script src="src/components/modal.js"></script>
+    <script src="src/components/navToogle.js"></script>
     <script src="src/components/subscriptionModal.js"></script>
     <script src="src/components/subscriptionConfirmationModal.js"></script>
   </body>

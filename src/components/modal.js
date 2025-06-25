@@ -1,20 +1,3 @@
-function editNav() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-
-document.getElementById("first-name").value = "Jean";
-document.getElementById("last-name").value = "Dupont";
-document.getElementById("email").value = "jean.dupont@example.com";
-document.getElementById("birthdate").value = "1990-01-01";
-document.getElementById("tournament-number").value = "2";
-document.getElementById("location3").checked = true;
-document.getElementById("checkbox2").checked = true;
-
 // DOM Elements
 const modalSignUp = document.querySelector(".modal--signUp");
 const modalBtn = document.querySelectorAll(".modal-btn");

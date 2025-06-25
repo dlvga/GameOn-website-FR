@@ -1,3 +1,13 @@
+// Filling the form with test data
+document.getElementById("first-name").value = "Jean";
+document.getElementById("last-name").value = "Dupont";
+document.getElementById("email").value = "jean.dupont@example.com";
+document.getElementById("birthdate").value = "1990-01-01";
+document.getElementById("tournament-number").value = "2";
+document.getElementById("location3").checked = true;
+document.getElementById("checkbox2").checked = true;
+
+
 // Select the form using a generic selector
 document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form default submission
@@ -8,6 +18,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
         el.removeAttribute('data-error');
     });
 
+    // Create a FormData object to easily access form values
     const formData = new FormData(this);
 
     const errorMessages = new Map();

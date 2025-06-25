@@ -1,3 +1,4 @@
+// Selector for the confirmation modal close button
 const closeConfirmBtn = document.querySelector('.btn-close-confirm');
 
 // close confirmation modal when click on close button
